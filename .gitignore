@@ -1,0 +1,17 @@
+/vendor/
+/create_admin.php
+/db.php
+/config.php
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor and temporary files
+/.idea/
+*.swp
+*.swo
+*.tmp
+*.bak
+*.logS
+~$*

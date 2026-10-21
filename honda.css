@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Mukta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f7f7f7;
+}
+
+.navbar{
+    border: 1px solid black;
+    background-color: #111111;
+    width: 100%;
+    height:115px;
+    text-align: center;
+}
+
+
+
+.logo img{
+    width:15%;
+}
+
+.main-img {
+    width: 20%;
+    display: block;
+    margin: 20px auto; /* Adjusted margin to center the image horizontally */
+    border-radius: 12px;
+    padding: 10px 20px;
+}
+
+
+.box:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    position: relative;
+    width: 100%; /* Ensures boxes take up full width of each grid cell */
+    max-width: 450px; /* Maximum width for each box */
+    height: 520px;
+    border: 1px solid #DAC0A3;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.box-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.box h3,
+.box p {
+    margin: 8px 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.box h3 {
+    top: 320px; /* Adjust the top value to position the h3 element */
+}
+
+.box p {
+    top: 350px; /* Adjust the top value to position the p element */
+}
+
+.btn {
+    position: absolute;
+    bottom: 80px; /* Adjust this value to place the button at the desired vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: hsl(0, 0%, 33%);
+}
+

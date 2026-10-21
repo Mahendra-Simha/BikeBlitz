@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); /* Responsive columns */
+    gap: 1rem; /* Space between items */
+    justify-content: center; /* Center the grid */
+}
+
+.box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    width: 350px; /* Ensure box width fits the grid column */
+    height:520px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.box-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+h3 {
+    margin: 0.5rem 0;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+.btn {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusts columns to fit smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Further adjustment for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+    }
+}

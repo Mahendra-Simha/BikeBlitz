@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Images\KTM logo.jpg">
+    <link rel="stylesheet" type="text/css" href="category.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+    </div>
+    </nav>
+    <img src="Images\KTM logo.jpg" alt="KTM logo" class="main-img">
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for bikes...">
+        <button onclick="searchBikes()">Search</button>
+    </div>
+    <div class="container">
+        <div class="box">
+            <img src="Images\KTM 125.jpg" alt="KTM 125" class="box-img">
+            <h3>Model - KTM 125</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('KTM 125','3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\KTM RC 125.jpg" alt="RC 125" class="box-img">
+            <h3>Model - KTM RC 125</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('KTM RC 125', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\KTM 200.jpg" alt="KTM 200" class="box-img">
+            <h3>Model - KTM 200 </h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('KTM 200', '3500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\KTM RC 200.jpg" alt="KTM RC 200" class="box-img">
+            <h3>Model - KTM RC 200</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('KTM RC 200', '3500')">Book Now</button>
+        </div>
+        </div>
+        
+        <div class="container">
+        <div class="box">
+            <img src="Images\KTM Duke 250.jpg" alt="Duke 250" class="box-img">
+            <h3>Model - Duke 250</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('KTM Duke 250','3500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\KTM Duke 390.jpg" alt="KTM Duke 390" class="box-img">
+            <h3>Model - Duke 390</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('KTM Duke 390', '4000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\KTM 390 adv.jpg" alt="KTM 390 adv" class="box-img">
+            <h3>Model - KTM 390 ADV</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('KTM 390 ADV', '4000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\KTM RC 390.jpg" alt="RC 390" class="box-img">
+            <h3>Model - KTM RC 390</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('KTM RC 390', '4000')">Book Now</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <img src="Images\KTM 790.png" alt="KTM 790" class="box-img">
+            <h3>Model - KTM 790</h3>
+            <p>Price - ₹8000</p>
+            <button class="btn" onclick="bookNow('KTM 790', '8000')">Book Now</button>
+        </div>
+</div>
+<script>
+    function bookNow(product, price) {
+        window.location.href = `checkout.html?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`;
+    }
+</script>
+<script src="search.js"></script>
+</body>
+</html>

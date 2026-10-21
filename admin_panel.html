@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Bg remove.png">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin_panel.css">
+</head>
+<style>
+    #ordersListSection {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#ordersListSection h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+#ordersListSection table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#ordersListSection table th, 
+#ordersListSection table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#ordersListSection table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+#ordersListSection table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#ordersListSection table tr:hover {
+    background-color: #f1f1f1;
+}
+
+#ordersListSection table td {
+    color: #555;
+}
+
+#ordersListSection table th:first-child,
+#ordersListSection table td:first-child {
+    text-align: center;
+}
+
+#ordersListSection table th:last-child,
+#ordersListSection table td:last-child {
+    text-align: right;
+}
+
+#ordersListSection table tr:last-child td {
+    border-bottom: none;
+}
+body {
+    font-family: 'Mukta', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.logo{
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+.img{
+    position: absolute;
+    left:0;
+    width:150px;
+    margin-left:8px;
+    margin-top: 10px;
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="logo" class="img"></a> 
+        </div>
+        <h1>Admin Panel</h1>
+            <!-- Navigation and other header content -->
+    
+    </header>
+
+    
+    <main>
+        <!-- Section for Adding Items -->
+        <section id="addItemSection">
+            <h2>Add New Item</h2>
+            <form id="itemForm" enctype="multipart/form-data">
+                <select id="category" name="category">
+                    <option value="Select Category">Select Category</option>
+                    <option value="TVS">TVS</option>
+                    <option value="Kinetic">Kinetic</option>
+                    <option value="Bajaj">Bajaj</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hero">Hero</option>
+                    <option value="TVS(above 100cc)">TVS(above 100cc)</option>
+                    <option value="Bajaj(Mid Segment)">Bajaj(Mid Segment)</option>
+                    <option value="Yezdi">Yezdi</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="KTM">KTM</option>
+                    <option value="Bajaj(Premium Segment)">Bajaj(Premium Segment)</option>
+                    <option value="Royal Enfield">Royal Enfield</option>
+                    <option value="Jawa">Jawa</option>
+                    <option value="Benelli">Benelli</option>
+                    <option value="Kawasaki">Kawasaki</option>
+                    <option value="Triumph">Triumph</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Harley Davidson">Harley Davidson</option>
+                    <option value="Honda Bigwing">Honda Bigwing</option>
+                </select>
+                <input type="text" name="name" placeholder="Name" required>
+                <textarea name="description" placeholder="Description"></textarea>
+                <input type="number" name="price" placeholder="Price" required>
+                <input type="file" name="image">
+                <button type="button" onclick="addItem()">Add Item</button>
+            </form>
+        </section>
+        
+        <!-- Section for Displaying Items -->
+        <section id="itemsListSection">
+            <h2>Items List</h2>
+            <select id="categorySelect" onchange="fetchItemsByCategory()">
+                    <option value="Select Category">Select Category</option>
+                    <option value="TVS">TVS</option>
+                    <option value="Kinetic">Kinetic</option>
+                    <option value="Bajaj">Bajaj</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hero">Hero</option>
+                    <option value="TVS(above 100cc)">TVS(above 100cc)</option>
+                    <option value="Bajaj(Mid Segment)">Bajaj(Mid Segment)</option>
+                    <option value="Yezdi">Yezdi</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="KTM">KTM</option>
+                    <option value="Bajaj(Premium Segment)">Bajaj(Premium Segment)</option>
+                    <option value="Royal Enfield">Royal Enfield</option>
+                    <option value="Jawa">Jawa</option>
+                    <option value="Benelli">Benelli</option>
+                    <option value="Kawasaki">Kawasaki</option>
+                    <option value="Triumph">Triumph</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Harley Davidson">Harley Davidson</option>
+                    <option value="Honda Bigwing">Honda Bigwing</option>
+            </select>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Category</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="itemList">
+                    <!-- Items will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Section for Updating Items -->
+        <section id="updateItemSection" style="display:none;">
+            <h2>Update Item</h2>
+            <form id="updateItemForm" enctype="multipart/form-data">
+                <input type="hidden" id="updateId" name="id">
+                
+                <!-- Category Dropdown -->
+                <label for="updateCategory">Category:</label>
+                <select id="updateCategory" name="category">
+                    <option value="Select Category">Select Category</option>
+                    <option value="TVS">TVS</option>
+                    <option value="Kinetic">Kinetic</option>
+                    <option value="Bajaj">Bajaj</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hero">Hero</option>
+                    <option value="TVS(above 100cc)">TVS(above 100cc)</option>
+                    <option value="Bajaj(Mid Segment)">Bajaj(Mid Segment)</option>
+                    <option value="Yezdi">Yezdi</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="KTM">KTM</option>
+                    <option value="Bajaj(Premium Segment)">Bajaj(Premium Segment)</option>
+                    <option value="Royal Enfield">Royal Enfield</option>
+                    <option value="Jawa">Jawa</option>
+                    <option value="Benelli">Benelli</option>
+                    <option value="Kawasaki">Kawasaki</option>
+                    <option value="Triumph">Triumph</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Harley Davidson">Harley Davidson</option>
+                    <option value="Honda Bigwing">Honda Bigwing</option>
+                </select>
+                
+                <input type="text" id="updateName" name="name" placeholder="Name" required>
+                <textarea id="updateDescription" name="description" placeholder="Description"></textarea>
+                <input type="number" id="updatePrice" name="price" placeholder="Price" required>
+                <input type="hidden" id="existingImage" name="existing_image">
+                <input type="file" id="updateImage" name="image">
+                <button type="button" onclick="saveUpdate()">Save Changes</button>
+                <button type="button" onclick="cancelUpdate()">Cancel</button>
+                <img id="currentImage" style="display:none; width:100px;" />
+            </form>
+        </section>
+    </main>
+    <section id="ordersListSection">
+        <h2>Orders List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Insurance Type</th>
+                    <th>Insurance Price</th>
+                    <th>Total Price</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Payment Method</th>
+                    <th>Starting Point</th>
+                    <th>Dropping Point</th>
+                    <th>Order Date</th>
+                </tr>
+            </thead>
+            <tbody id="ordersList">
+                <!-- Orders will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </section> 
+    <footer>
+        <!-- Footer content -->
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Bg remove.png">
+    <title>Places and Addresses</title>
+    <style>
+        body {
+            font-family: 'Mukta', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar{
+            border: 1px solid black;
+            background-color: #111111;
+            width: 100%;
+            height:115px;
+            text-align: center;
+            position: sticky;
+            padding-top:8px ;
+        }
+
+        .logo img{
+            width:15%;
+            margin-top: 8px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 32%;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .box-content {
+            padding: 20px;
+        }
+
+        .box h2 {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .box p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="box" data-place-name="Place Name 1">
+            <img src="Cities\warehouse.jpeg" alt="Banglore">
+            <div class="box-content">
+                <h2>Banglore</h2>
+                <p>Banashankari 3rd Stage, 560050</p>
+            </div>
+        </div>
+
+        <div class="box" data-place-name="Place Name 2">
+            <img src="Cities\warehouse.jpeg" alt="Place 2">
+            <div class="box-content">
+                <h2>Mysore</h2>
+                <p>Ashokpuram, 570008</p>
+            </div>
+        </div>
+
+        <div class="box" data-place-name="Place Name 3">
+            <img src="Cities\warehouse.jpeg" alt="Place 3">
+            <div class="box-content">
+                <h2>Manglore</h2>
+                <p>Bejai, 575004</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box" data-place-name="Place Name 1">
+            <img src="Cities\warehouse.jpeg" alt="Banglore">
+            <div class="box-content">
+                <h2>Davanagere</h2>
+                <p>AVK road, 577022</p>
+            </div>
+        </div>
+
+        <div class="box" data-place-name="Place Name 2">
+            <img src="Cities\warehouse.jpeg" alt="Place 2">
+            <div class="box-content">
+                <h2>Bellary</h2>
+                <p>Antapur Road Near MG, 583101</p>
+            </div>
+        </div>
+
+        <div class="box" data-place-name="Place Name 3">
+            <img src="Cities\warehouse.jpeg" alt="Place 3">
+            <div class="box-content">
+                <h2>Harapanahalli</h2>
+                <p>Kottur road, 583131</p>
+            </div>
+        </div>
+    </div> 
+
+
+    <div class="container">
+        <div class="box" data-place-name="Place Name 1">
+            <img src="Cities\warehouse.jpeg" alt="Banglore">
+            <div class="box-content">
+                <h2>Mumbai</h2>
+                <p>Powai, 400076</p>
+            </div>
+        </div>
+
+        <div class="box" data-place-name="Place Name 2">
+            <img src="Cities\warehouse.jpeg" alt="Place 2">
+            <div class="box-content">
+                <h2>Delhi</h2>
+                <p>NCR, 110001</p>
+            </div>
+        </div>
+
+        <div class="box" data-place-name="Place Name 3">
+            <img src="Cities\warehouse.jpeg" alt="Place 3">
+            <div class="box-content">
+                <h2>Haryana</h2>
+                <p>Faridabad, 101213</p>
+            </div>
+        </div>
+    </div> 
+
+    <div class="container">
+        <div class="box" data-place-name="Place Name 1">
+            <img src="Cities\warehouse.jpeg" alt="Banglore">
+            <div class="box-content">
+                <h2>Jammu & Kashmir</h2>
+                <p>Shaktinagar 180001</p>
+            </div>
+        </div>
+
+        <div class="box" data-place-name="Place Name 2">
+            <img src="Cities\warehouse.jpeg" alt="Place 2">
+            <div class="box-content">
+                <h2>Ladakh</h2>
+                <p>Budh Vihar Colony, 194104</p>
+            </div>
+        </div>
+
+        <div class="box" data-place-name="Place Name 3">
+            <img src="Cities\warehouse.jpeg" alt="Place 3">
+            <div class="box-content">
+                <h2>Manali</h2>
+                <p>175103</p>
+            </div>
+        </div>
+    </div> 
+
+    <div class="container">
+        <div class="box" data-place-name="Place Name 1">
+            <img src="Cities\warehouse.jpeg" alt="Banglore">
+            <div class="box-content">
+                <h2>Srinagar</h2>
+                <p>190001</p>
+            </div>
+        </div>
+        </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const boxes = document.querySelectorAll('.box');
+
+            boxes.forEach(function(box) {
+                box.addEventListener('click', function() {
+                    const placeName = box.getAttribute('data-place-name');
+                    console.log(`You clicked on: ${placeName}`);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

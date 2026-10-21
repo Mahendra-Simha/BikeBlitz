@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Images\bajaj new logo.jpg">
+    <link rel="stylesheet" type="text/css" href="category.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+    </div>
+    </nav>
+    <img src="Images\bajaj new logo.jpg" alt="Bajaj logo" class="main-img">
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for bikes...">
+        <button onclick="searchBikes()">Search</button>
+    </div>
+    <div class="container">
+        <div class="box">
+            <img src="Images\Bajaj NS400.png" alt="NS400" class="box-img">
+            <h3>Model - NS 400</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('Bajaj NS400','4000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\Bajaj Dominar 400.jpg" alt="Dominar 400" class="box-img">
+            <h3>Model - Dominar 400</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('Dominar 400', '4000')">Book Now</button>
+        </div>
+        </div>
+        
+<script>
+    function bookNow(product, price) {
+        window.location.href = `checkout.html?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`;
+    }
+</script>
+<script src="search.js"></script>
+</body>
+</html>

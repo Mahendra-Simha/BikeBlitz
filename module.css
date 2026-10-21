@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Mukta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f7f7f7;
+}
+
+.navbar{
+    border: 1px solid black;
+    background-color: #111111;
+    width: 100%;
+    height:115px;
+    text-align: center;
+    position: sticky;
+}
+
+.logo img{
+    width:15%;
+}
+
+/* .container{
+    display: flex;
+    
+}
+
+.box1{
+    border: 1px solid #ffa800;
+    border-radius: 12px;
+    margin: 20px 200px;
+    width: 450px;
+    padding: 20px;
+    
+} */
+
+/* .box1-img{
+    width: 70%;
+} */
+
+.box1 p{
+    margin: 12px auto;
+    font-size: 18px;
+}
+
+h2{
+    margin: 8px 8px;
+    border: 1px solid lightskyblue;
+    width:150px;
+    text-align: center;
+    border-radius:12px;
+    background-color:#d84242;
+    color: white;
+}
+
+/* results.css */
+.results-container {
+    width: 200px;
+    height:auto;
+    margin:20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+#pincode-display,
+#place-display {
+    font-weight: bold;
+}
+
+#pincode-display {
+    color: #007bff; /* Primary color for pincode */
+}
+
+#place-display {
+    color: #28a745; /* Secondary color for place name */
+}
+
+.pincode{
+        color: #333;
+        margin-bottom: 20px;
+        background: #f7f7f7;
+        font-size: 15px;
+        }

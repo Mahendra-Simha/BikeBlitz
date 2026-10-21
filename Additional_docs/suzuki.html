@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzuki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Images\suzuki symbol.jpg">
+    <link rel="stylesheet" type="text/css" href="category.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+    </div>
+    </nav>
+    <img src="Images\suzuki logo.jpg" alt="Suzuki logo" class="main-img">
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for bikes...">
+        <button onclick="searchBikes()">Search</button>
+    </div>
+    <div class="container">
+        <div class="box">
+            <img src="Images\suzuki access.jpg" alt="Suzuki Access" class="box-img">
+            <h3>Model - Suzuki Access</h3>
+            <p>Price - ₹2500</p>
+            <button class="btn" onclick="bookNow('Suzuki Access', '2500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\suzuki Avenis.png" alt="Suzuki Avenis" class="box-img">
+            <h3>Model - Suzuki Avenis</h3>
+            <p>Price - ₹2500</p>
+            <button class="btn" onclick="bookNow('Suzuki Avenis', '2500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\suzuki burgman.jpg" alt="Suzuki Burgman" class="box-img">
+            <h3>Model - Burgman </h3>
+            <p>Price - ₹2500</p>
+            <button class="btn" onclick="bookNow('Suzuki Burgman', '2500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\suzuki gixxer.png" alt="Suzuki Gixxer" class="box-img">
+            <h3>Model - Suzuki Gixxer</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Suzuki Gixxer', '3500')">Book Now</button>
+        </div>
+        </div>
+        
+        <div class="container">
+        <div class="box">
+            <img src="Images\suzuki GS150.jpg" alt="Suzuki GS150" class="box-img">
+            <h3>Model - Suzuki GS150</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Suzuki GS150','3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\suzuki hayate.jpg" alt="Suzuki hayate" class="box-img">
+            <h3>Model - Suzuki hayate </h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow(' Suzuki hayate', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\suzuki intruder.jpg" alt="Suzuki intruder" class="box-img">
+            <h3>Model - Intruder</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Suzuki Intruder', '3500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\suzuki vstorm.png" alt="Suzuki Vstrom" class="box-img">
+            <h3>Model - Vstorm</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Suzuki Vstorm', '3500')">Book Now</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <img src="Images\suzuki strom.jpg" alt="suzuki strom" class="box-img">
+            <h3>Model - Suzuki strom</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Suzuki strom', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\suzuki max100.jpeg" alt="Suzuki MAX100" class="box-img">
+            <h3>Model - MAX 100</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Suzuki MAX 100', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\suzuki samurai.jpg" alt="Suzuki samurai" class="box-img">
+            <h3>Model - Samurai</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Suzuki Samurai', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\suzuki fiero.jpg" alt="Suzuki Fiero" class="box-img">
+            <h3>Model - Suzuki Fiero</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Suzuki Fiero', '3000')">Book Now</button>
+        </div>
+    </div>
+</div>
+<script>
+    function bookNow(product, price) {
+        window.location.href = `checkout.html?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`;
+    }
+</script>
+<script src="search.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="icon" type="image/x-icon" href="Bg remove.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="user.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+    </div>
+    </nav>
+    <div class="container">
+        <h2>Create Account</h2>
+        <form id="accountForm" action="create_account.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="phone">Phone Number:</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
+            
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required 
+       pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$" 
+       title="Password must be at least 8 characters long, include at least one letter, one number, and can include special characters.">
+
+
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+    // Form validation for the registration form
+    const accountForm = document.getElementById("accountForm");
+    if (accountForm) {
+        accountForm.addEventListener("submit", function(event) {
+            if (!validateForm(accountForm)) {
+                event.preventDefault();
+            }
+        });
+    }
+
+    // Function to validate form inputs
+    function validateForm(form) {
+        let valid = true;
+        let errors = [];
+        const inputs = form.querySelectorAll("input[required]");
+        let firstInvalidInput = null;
+
+        inputs.forEach(input => {
+            if (input.value.trim() === "") {
+                valid = false;
+                errors.push(input.name + " is required.");
+                if (!firstInvalidInput) {
+                    firstInvalidInput = input;
+                }
+            } else if (input.type === "password") {
+                // Updated regex pattern to accept special characters
+                const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
+                if (!passwordPattern.test(input.value)) {
+                    valid = false;
+                    errors.push("Password must be at least 8 characters long, include at least one letter, one number, and can include special characters.");
+                    if (!firstInvalidInput) {
+                        firstInvalidInput = input;
+                    }
+                }
+            }
+        });
+
+        // Show all errors at once and focus on the first invalid input
+        if (!valid) {
+            alert(errors.join("\n"));
+            if (firstInvalidInput) {
+                firstInvalidInput.focus();
+            }
+        }
+
+        return valid;
+    }
+});
+
+    </script>
+</body>
+</html>

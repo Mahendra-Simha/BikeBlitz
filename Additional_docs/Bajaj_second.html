@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajaj</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Images\bajaj new logo.jpg">
+    <link rel="stylesheet" type="text/css" href="category.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+    </div>
+    </nav>
+    
+    <img src="Images\bajaj new logo.jpg" alt="Bajaj logo" class="main-img">
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for bikes...">
+        <button onclick="searchBikes()">Search</button>
+    </div>
+    
+    <div class="container">
+        <div class="box">
+            <img src="Images\bajaj ct125.jpg" alt="Bajaj CT125" class="box-img">
+            <h3>Model - Bajaj CT125</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Bajaj CT125', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\bajaj discover.jpg" alt="Bajaj discover" class="box-img">
+            <h3>Model - Bajaj Discover</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Bajaj Discover', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\bajaj caliber.jpg" alt="Bajaj Caliber" class="box-img">
+            <h3>Model - Bajaj Caliber </h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Bajaj Caliber', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\bajaj boxer.jpg" alt="Bajaj Boxer" class="box-img">
+            <h3>Model - Bajaj Boxer</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Bajaj Boxer', '3000')">Book Now</button>
+        </div>
+        </div>
+        
+        <div class="container">
+        <div class="box">
+            <img src="Images\bajaj pulzar 125.jpg" alt="Pulzar 125" class="box-img">
+            <h3>Model - Pulzar 125</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Bajaj Pulzar 125','3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\bajaj pulzar 150.jpg" alt="Pulzar 150" class="box-img">
+            <h3>Model - Pulzar 150</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Bajaj Pulzar 150', '3500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\bajaj 180.jpg" alt="Pulzar 180" class="box-img">
+            <h3>Model - Pulzar 180</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Bajaj Pulzar 180', '3500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\bajaj 220.jpg" alt="Pulzar 220" class="box-img">
+            <h3>Model - Pulzar 220</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('Bajaj Pulzar 220', '4000')">Book Now</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <img src="Images\bajaj ns 125.jpg" alt="NS 125" class="box-img">
+            <h3>Model - NS 125</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Bajaj NS 125', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\bajaj ns 160.jpg" alt="NS 160" class="box-img">
+            <h3>Model - NS 160</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Bajaj NS 160', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\bajaj ns 200.jpg" alt="NS 200" class="box-img">
+            <h3>Model - NS 200</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Bajaj NS 200', '3500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\bajaj avenger.jpg" alt="avenger" class="box-img">
+            <h3>Model - Avenger</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Bajaj Avenger', '3500')">Book Now</button>
+        </div>
+    </div>
+    <div class="container">
+    <div class="box">
+        <img src="Images\bajaj platina.jpg" alt="Bajaj Platina" class="box-img">
+        <h3>Model - Platina</h3>
+        <p>Price - ₹3000</p>
+        <button class="btn" onclick="bookNow('Bajaj Platina', '3000')">Book Now</button>
+    </div>
+</div>
+</div>
+<script>
+    function bookNow(product, price) {
+        window.location.href = `checkout.html?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`;
+    }
+</script>
+<script src="search.js"></script>
+</body>
+</html>

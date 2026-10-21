@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue as</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Bg remove.png">
+    <link rel="stylesheet" type="text/css" href="module.css">
+</head>
+<style>
+ .container {
+    display: flex;
+    justify-content: space-around; /* Space out the boxes evenly */
+    flex-wrap: wrap; /* Allows boxes to wrap if there's not enough space */
+    padding: 20px; /* Adds padding around the container */
+}
+
+/* Styling for each box */
+.box1 {
+    border: 1px solid #ffa800; /* Border color and style */
+    border-radius: 12px; /* Rounded corners */
+    margin: 20px; /* Space around each box */
+    width: 450px; /* Fixed width for each box */
+    padding: 20px; /* Padding inside the box */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    background-color: #fff; /* White background for the box */
+    text-align: center; /* Center-align text inside the box */
+}
+
+.box1-img{
+    width: 70%;
+}
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+    </div>
+    </nav>
+    <h2>Continue as</h2>
+    <div class="results-container">
+        <h2 class="pincode">Pincode Information</h2>
+        <p id="pincode-display"></p>
+        <p id="place-display"></p>
+    </div>
+
+    <div class="container">
+        <div class="box1">
+            <a href="user.html"><img src="Images\user.jpg" alt="user" class="box1-img"></a>
+            <p><b>"User mode"</b> refers to accessing the site with a personalized account that saves settings and data.</p>
+        </div>
+
+        <div class="box1">
+            <a href="login.html"><img src="Images\guest.jpg" alt="guest" class="box1-img"></a>
+            <p><b>"Existing User"</b> If you are already existing user</p>
+        </div>
+        
+        <div class="box1">
+            <a href="welcome_guest.php"><img src="Images\guest.jpg" alt="guest" class="box1-img"></a>
+            <p><b>"Guest mode"</b> provides temporary access to view services but does not allow availing the service.</p>
+        </div>
+        
+</div>
+<script>
+    // results.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the pincode from the URL query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const pincode = urlParams.get('pincode');
+
+    // Display the pincode
+    document.getElementById('pincode-display').textContent = `Pincode: ${pincode}`;
+
+    // Lookup place name based on pincode
+    const placeName = lookupPlace(pincode);
+    if (placeName === "Unknown Place") {
+        // Display a message if pincode does not exist
+        document.getElementById('place-display').textContent = "Sorry, we couldn't find any place for this pincode.";
+        document.getElementById('place-display').style.color = "#dc3545"; // Set color to indicate error
+    } else {
+        document.getElementById('place-display').textContent = `Place: ${placeName}`;
+        document.getElementById('place-display').style.color = "#28a745"; // Set color for valid place
+    }
+});
+
+function lookupPlace(pincode) {
+    // Dummy data for place names
+    var placeNames = {
+        "583131": "Harapanahalli",
+        "570008": "Mysore",
+        "583104": "Bellary",
+        "560050": "Bangalore",
+        "575004": "Manglore",
+        "577022": "Davanagere",
+        "400076": "Mumbai",
+        "110001": "Delhi",
+        "101213": "Haryana",
+        "180001": "Jammu & Kashmir",
+        "194104": "Ladakh",
+        "175103": "Manali",
+        "190001": "Srinagar",
+        // Add more pincode-place mappings here
+    };
+
+    return placeNames[pincode] || "Unknown Place";
+}
+
+</script>
+</body>
+</html>

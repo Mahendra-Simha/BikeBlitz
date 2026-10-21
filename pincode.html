@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Availability</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Bg remove.png">
+    <link rel="stylesheet" type="text/css" href="pincode.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+        </div>
+    </nav>
+    <div class="box">
+        <p class="center-text">Hey!! We're happy you chose us☺️.</p>
+        <div class="box-layout">
+            <img src="Images/Pincode.png" alt="India Map" class="box-img">
+            <div class="box-content">
+                <h2>Enter Your Pincode</h2>
+                <input type="text" id="pincode" placeholder="Enter 6-digit pin code">
+                <button class="box-btn" onclick="checkPincode()">Check</button>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+       // pincode.js
+
+       function checkPincode() {
+    var pincode = document.getElementById('pincode').value.trim();
+    
+    // Dummy data for place names; replace with actual data or API call
+    var placeNames = {
+        "583131": "Harapanahalli",
+        "570008": "Mysore",
+        "583104": "Bellary",
+        "560050": "Bangalore",
+        "575004": "Manglore",
+        "577022": "Davanagere",
+        "400076": "Mumbai",
+        "110001": "Delhi",
+        "101213": "Haryana",
+        "180001": "Jammu & Kashmir",
+        "194104": "Ladakh",
+        "175103": "Manali",
+        "190001": "Srinagar",
+        // Add more pincode-place mappings here
+    };
+
+    if (pincode.length === 6 && !isNaN(pincode)) {
+        if (placeNames[pincode]) {
+            // Retrieve the place name based on pincode
+            const placeName = placeNames[pincode];
+            
+            // Display success message with place name
+            document.getElementById('result').textContent = `Hooray, we got you! Service available in ${placeName}.`;
+            document.getElementById('result').style.color = "#28a745"; // Success color
+            
+            // Redirect after a delay (e.g., 3 seconds)
+            setTimeout(() => {
+                window.location.href = `module.html?pincode=${encodeURIComponent(pincode)}&placename=${encodeURIComponent(placeName)}`;
+            }, 3000); // Delay in milliseconds (3000 ms = 3 seconds)
+        } else {
+            // Show error message if pincode does not match
+            document.getElementById('result').textContent = "Sorry, we couldn't find any information for this pincode.";
+            document.getElementById('result').style.color = "#dc3545"; // Error color
+        }
+    } else {
+        document.getElementById('result').textContent = "Please enter a valid 6-digit pincode.";
+        document.getElementById('result').style.color = "#dc3545"; // Error color
+    }
+}
+
+
+    </script>
+</body>
+</html>

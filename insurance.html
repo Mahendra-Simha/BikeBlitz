@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Insurance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Bg remove.png">
+    <style>
+        body {
+            font-family: 'Mukta', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .insurance-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .insurance-item {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .insurance-item input[type="radio"] {
+            margin-right: 15px;
+        }
+        .insurance-item h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #444;
+        }
+        .insurance-item p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .insurance-item .price {
+            margin-left: auto;
+            font-weight: bold;
+            color: #333;
+        }
+      
+        .navbar{
+            border: 1px solid black;
+            background-color: #111111;
+            width: 100%;
+            height:115px;
+            text-align: center;
+            position: sticky;
+            padding-top:8px ;
+        }
+
+        .logo img{
+            width:15%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Types of Insurance</h1>
+        <form action="checkout.html" method="post">
+            <ul class="insurance-list">
+                <li class="insurance-item">
+                    <input type="radio" id="Carrier Insurance" name="insurance-type" value="Carrier Insurance">
+                    <label for="Carrier Insurance">
+                        <h2>Carrier Insurance</h2>
+                        <p>This usually covers basic damage or loss. Check the terms and coverage limits before shipping.</p>
+                        <p>Coverage Includes: Basic damage or loss of the bike.<br>
+                            Common Parts Covered: Frame, wheels, handlebars, and other major components.<br>
+                            Exclusions: Often excludes accessories like racks, lights, or custom modifications.</p>
+                        <span class="price">₹750</span>
+                    </label>
+                </li>
+                <li class="insurance-item">
+                    <input type="radio" id="Third-Party Insurance" name="insurance-type" value="Third-Party Insurance">
+                    <label for="Third-Party Insurance">
+                        <h2>Third-Party Insurance</h2>
+                        <p>Customer can purchase additional insurance from third-party providers who specialize in shipping insurance. This can offer higher coverage limits and more comprehensive protection.</p>
+                        <p>Coverage Includes: More comprehensive coverage compared to standard carrier insurance.<br>
+                            Common Parts Covered: Frame, wheels, drivetrain, handlebars, pedals, and any accessories that were declared.<br>
+                            Exclusions: May exclude certain types of damage (e.g., cosmetic damage) or require additional documentation for high-value parts.</p>
+                        <span class="price">₹1500</span>
+                    </label>
+                </li>
+                <li class="insurance-item">
+                    <input type="radio" id="Declared Value Coverage" name="insurance-type" value="Declared Value Coverage">
+                    <label for="Declared Value Coverage">
+                        <h2>Declared Value Coverage</h2>
+                        <p>Coverage Includes: The amount declared for the bike, which could include major components and accessories if declared.<br>
+                            Common Parts Covered: Depends on the declared value, typically includes all parts of the bike and accessories declared.<br>
+                            Exclusions: May not cover damages if the declared value is not accurate or if certain conditions aren't met.</p>
+                        <span class="price">₹2500</span>
+                    </label>
+                </li>
+                <li class="insurance-item">
+                    <input type="radio" id=" Comprehensive Insurance" name="insurance-type" value="Comprehensive Insurance">
+                    <label for=" Comprehensive Insurance">
+                        <h2> Comprehensive Insurance</h2>
+                        <p>Coverage Includes: Extensive coverage for damage, loss, and theft. <br>
+                            Common Parts Covered: Frame, wheels, drivetrain, handlebars, pedals, accessories, and any other parts or components. <br>
+                            Exclusions: Might have specific exclusions related to high-risk items or particular types of damage.</p>
+                        <span class="price">₹3500</span>
+                    </label>
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

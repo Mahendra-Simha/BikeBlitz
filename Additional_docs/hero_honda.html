@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Images\hero logo.jpg">
+    <link rel="stylesheet" type="text/css" href="category.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+    </div>
+    </nav>
+    <img src="Images\hero honda.png" alt="hero logo" class="main-img">
+    <div class="container">
+        <div class="box">
+            <img src="Images\hero pleasure.jpg" alt="hero pleasure" class="box-img">
+            <h3>Model - Hero Pleasure</h3>
+            <p>Price - ₹2500</p>
+            <button class="btn" onclick="bookNow('Hero Pleasure', '2500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\hero maestro.jpg" alt="Hero Maestro" class="box-img">
+            <h3>Model - Hero Maestro </h3>
+            <p>Price - ₹2500</p>
+            <button class="btn" onclick="bookNow('Hero Maestro', '2500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\hero splendor.jpg" alt="Hero Splendor" class="box-img">
+            <h3>Model - Splendor </h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Hero Splendor', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\hero passion pro.jpg" alt="Hero Passion Pro" class="box-img">
+            <h3>Model - Passion Pro</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Hero Passion Pro', '3000')">Book Now</button>
+        </div>
+        </div>
+        
+        <div class="container">
+        <div class="box">
+            <img src="Images\hero glamour.jpg" alt="hero glamour" class="box-img">
+            <h3>Model - Hero Glamour</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Hero Glamour', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\hero hf delux.jpg" alt="Hero HF deluxe" class="box-img">
+            <h3>Model - HF deluxe </h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Hero HF deluxe', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\hero ignitor.jpg" alt="Hero Ignitor" class="box-img">
+            <h3>Model - Hero Ignitor </h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Hero Ignitor', '3000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\hero xpulse.jpg" alt="Hero Xpluse" class="box-img">
+            <h3>Model - Hero Xpluse</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Hero Xpluse', '3500')">Book Now</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <img src="Images\hero xtreme 125r.jpg" alt="Hero xtreme 125r" class="box-img">
+            <h3>Model - Xtreme 125R</h3>
+            <p>Price - ₹3000</p>
+            <button class="btn" onclick="bookNow('Hero Xtreme 125R', '3500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\hero xtreme 160R.jpg" alt="Hero Xtreme 160R" class="box-img">
+            <h3>Model - Xtreme 160R</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Hero Xtreme 160R', '3500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\hero CBZ.jpg" alt="Hero CBZ" class="box-img">
+            <h3>Model - Hero CBZ </h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Hero CBZ', '3500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\hero karizma.jpg" alt="Hero karizma" class="box-img">
+            <h3>Model - Hero karizma</h3>
+            <p>Price - ₹3500</p>
+            <button class="btn" onclick="bookNow('Hero karizma', '3500')">Book Now</button>
+        </div>
+    </div>
+</div>
+<script>
+    function bookNow(product, price) {
+        window.location.href = `checkout.html?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`;
+    }
+</script>
+</body>
+</html>

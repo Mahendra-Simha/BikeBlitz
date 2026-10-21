@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Images\jawa logo.jpg">
+    <link rel="stylesheet" type="text/css" href="category.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+    </div>
+    </nav>
+    <img src="Images\Jawa logo.jpg" alt="Jawa logo" class="main-img">
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for bikes...">
+        <button onclick="searchBikes()">Search</button>
+    </div>
+    <div class="container">
+        <div class="box">
+            <img src="Images\jawa 250.jpg" alt="Jawa 250" class="box-img">
+            <h3>Model - Jawa 250</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('Jawa 250','4000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\jawa 350.png" alt="jawa 350" class="box-img">
+            <h3>Model - Jawa 350</h3>
+            <p>Price - ₹4500</p>
+            <button class="btn" onclick="bookNow('Jawa 350', '4500')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\jawa 350 SV.png" alt="300 SV" class="box-img">
+            <h3>Model - Jawa 300 SV </h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('Jawa 300 SV ', '4000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\jawa 353.jpg" alt="Jawa 353" class="box-img">
+            <h3>Model - Jawa 353</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('Jawa 353', '4000')">Book Now</button>
+        </div>
+        </div>
+        
+        <div class="container">
+        <div class="box">
+            <img src="Images\jawa 500.png" alt="Jawa 500" class="box-img">
+            <h3>Model - Jawa 500</h3>
+            <p>Price - ₹5000</p>
+            <button class="btn" onclick="bookNow('Jawa 500','5000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\jawa 42.jpg" alt="jawa 42" class="box-img">
+            <h3>Model - Jawa 42</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('Jawa 42', '4000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\jawa 42 bobber.png" alt="Jawa 42 bobber" class="box-img">
+            <h3>Model - 42 bobber</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('Jawa 42 bobber', '4000')">Book Now</button>
+        </div>
+
+        <div class="box">
+            <img src="Images\jawa perak.jpg" alt="Perak" class="box-img">
+            <h3>Model - Jawa Perak</h3>
+            <p>Price - ₹4000</p>
+            <button class="btn" onclick="bookNow('Jawa Perak', '4000')">Book Now</button>
+        </div>
+    </div>
+<script>
+    function bookNow(product, price) {
+        window.location.href = `checkout.html?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`;
+    }
+</script>
+<script src="search.js"></script>
+</body>
+</html>

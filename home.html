@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeBlitz - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Bg remove.png">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <style>
+        .footer-section a {
+            text-decoration: none;
+            color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li class="signin">
+                <a href="#">Sign In</a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="user.html">Create an Account</a></li>
+                        <li><a href="login.html">Sign In (Log In)</a></li>
+                        <li><a href="admin_login.html">Admin Sign In</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="cities.html">Cities</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Make sure "Background Video.mp4" does not have spaces in the actual filename if possible! -->
+        <video src="Background Video.mp4" autoplay muted></video>
+        <div class="container-overlay">
+            <p>Wanna Ship Your Bike Within India?</p>
+            <a href="pincode.html"><button class="co-btn">Explore</button></a>
+        </div>
+    </div>
+
+    <div class="main_container">
+        <!-- Also recommended to change "Banner 3.png" to "Banner-3.png" in your folders -->
+        <img src="Banner 3.png" alt="banner" class="m_img">
+    </div>
+
+    <h2 class="carousel-h2">SOME WORDS FROM OUR HAPPY CUSTOMERS!</h2>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <!-- FIXED: Changed backslash to forward slash -->
+                <img src="Images/Review 1.jpeg" alt="Reviewer 1">
+                <p class="review-text">"I was worried about shipping my vintage Harley, but the team handled everything
+                    with such care. The bike arrived on time and in perfect condition. Highly recommended!"</p>
+                <!-- FIXED: Typo Bangalore -->
+                <span class="review-author">Nikhil - Bangalore to Mumbai<br></span>
+                <span class="review-author">Triumph Tiger 800</span>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/Review 2.jpeg" alt="Reviewer 2">
+                <p class="review-text">"I used this service to ship my new sports bike. The booking process was
+                    straightforward, and the pickup was timely. My bike arrived without a scratch, and I couldn't be
+                    happier with the service."</p>
+                <span class="review-author">Ashish - Davanagere to Bellary<br></span>
+                <span class="review-author">Triumph Street Triple 765</span>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/Review 3.jpeg" alt="Reviewer 3">
+                <p class="review-text">"Excellent service! The team was professional, and my bike arrived in perfect
+                    condition. The price was reasonable, and the service exceeded my expectations. I will definitely use
+                    them again in the future."</p>
+                <span class="review-author">Srujan - Bellary to Hyderabad<br></span>
+                <span class="review-author">Honda Shine</span>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/Review 4.jpeg" alt="Reviewer 4">
+                <p class="review-text">"Excellent service! The team was professional, and my bike arrived in perfect
+                    condition. The price was reasonable, and the service exceeded my expectations. I will definitely use
+                    them again in the future."</p>
+                <!-- FIXED: Typo Enfield -->
+                <span class="review-author">Chaitanya - Hyderabad to Chandigarh <br></span>
+                <span class="review-author">Royal Enfield Himalayan</span>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/Review 5.jpeg" alt="Reviewer 5">
+                <p class="review-text">"Excellent service! The team was professional, and my bike arrived in perfect
+                    condition. The price was reasonable, and the service exceeded my expectations. I will definitely use
+                    them again in the future."</p>
+                <span class="review-author">Rohit - Gurgaon to Ladakh<br></span>
+                <span class="review-author">Hero Xpulse</span>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true">&#10094;</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true">&#10095;</span>
+        </a>
+    </div>
+
+    <footer class="footer-grid">
+        <div class="footer-logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Company Logo"></a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Company</h4>
+            <a href="about_us.html">
+                <p>About Us</p>
+            </a>
+            <!-- FIXED: Typo carrer to career -->
+            <a href="carrer.html">
+                <p>Careers</p>
+            </a>
+            <a href="privacy.html">
+                <p>Privacy Policy</p>
+            </a>
+        </div>
+        <div class="footer-section">
+            <h4>Services</h4>
+            <p>Shipping</p>
+            <p>Tracking</p>
+            <a href="insurance.html">
+                <p>Insurance</p>
+            </a>
+        </div>
+        <section id="contact-us">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: mahendrasimha.rs@gmail.com</p>
+                <p>Phone: (+91) 9663653916</p>
+                <p>Address: Bellary</p>
+            </div>
+        </section>
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/?lang=en-in"><i class="fa-solid fa-x"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <p>©BikeBlitz</p>
+        </div>
+    </footer>
+
+    <script src="carousel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    border: 1px solid black;
+    background-color: #111111;
+    width: 100%;
+    height:100px;
+    text-align: center;
+}
+
+.logo img{
+    width:15%;
+}
+
+.about-us{
+    background-color: #EFEAEA;
+    text-align: center;
+    
+}
+
+.box-model{
+    display: flex;
+    
+}
+
+.box{
+    border: none;
+    width:100px;
+    margin: 30px auto;
+}
+
+.box-img{
+    width:100%;
+    border-radius: 50px;
+    object-fit: cover;
+}

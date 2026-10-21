@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - BikeBlitz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Bg remove.png">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <style>
+        /* ADDED: Pushes the body content down so it doesn't hide behind the fixed navbar */
+        body {
+            margin-top: 130px;
+            /* 110px navbar height + 20px extra breathing room */
+        }
+
+        h5 {
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            /* Makes the navbar stick to the top */
+            width: 100%;
+            top: 0;
+            left: 0;
+            /* Ensures it starts exactly at the left edge */
+            height: 110px;
+            text-align: center;
+            z-index: 1000;
+            /* Ensures the navbar stays on top of other elements */
+        }
+
+        .logo img {
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="Bg remove.png" alt="Logo"></a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" action="login.php" method="POST">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <!-- FIXED: Added the apostrophe -->
+        <h5>Don't have an account? <a href="user.html">Click here to create</a></h5>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
